@@ -1,0 +1,21 @@
+.about-concat
+    .concat-all.clearfix
+        .concat-text.fl
+            .concat-content.ac.fl
+                .concat-title.at #{content.name}
+                div
+                    div 地址: #{content.address}
+                    div 电话: #{content.telephone}
+                    div 传真: #{content.fax}
+                    div 品牌媒介合作: #{content.email}
+        .concat-map.fr(style="height:184px")
+            iframe(src="/other/symap.html?h=154&w=300&mapPoint=#{content.mapPoint}" height="" scrolling="no" style="background-color: transparent;" marginwidth="0" marginheight="0" frameborder="0")
+    .map-detail
+        ul.clearfix
+            each company in content.companyList
+                li
+                    img(src="#{company.picUrl}" alt="#{company.shortName}" style="width: 220px;height: 154px")
+                    .refer
+                        span.at #{company.shortName}
+                        br
+                        span.ac.b 查看

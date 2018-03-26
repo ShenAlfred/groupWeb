@@ -1,7 +1,7 @@
-extends ../about_layout
+extends ../property/property_layout
 
 block content
-    include ../../include/header
+    include ../include/header
     input#activeIndex(type="hidden" value="#{activeIndex}")
     .about-main
         .main.clearfix
@@ -9,9 +9,9 @@ block content
                 span.text1
                 span.text2
                 span.text3
-            include ../../include/left_block
-            include ../../include/right_block
+            include ../include/left_block
+            include ../include/right_block
     .footer
-        include ../../include/footer2
+        include ../include/footer2
 
     script(src="/javascripts/lib/jquery-1.8.3.min.js")
