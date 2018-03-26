@@ -1,0 +1,10 @@
+.line
+.about-aptitude
+    .smallPic
+        .aptitude-title #{content[0].typeDesc}
+        .aptitude
+            ul.smallPic1.clearfix
+                each v in content
+                    each pic in v.picList
+                        li
+                            img(src="#{pic.url}" alt="#{pic.title}")

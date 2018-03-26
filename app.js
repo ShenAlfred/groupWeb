@@ -12,6 +12,10 @@ var team = require('./routes/team');
 var event = require('./routes/event');
 var detail = require('./routes/detail');
 var aptitude = require('./routes/aptitude');
+var concat = require('./routes/concat');
+var finacial = require('./routes/finacial');
+var banking = require('./routes/banking');
+var syonline = require('./routes/syonline');
 
 var app = express();
 
@@ -34,6 +38,10 @@ app.use('/about-architecture', architecture);
 app.use('/about-team', team);
 app.use('/about-event', event);
 app.use('/about-aptitude', aptitude);
+app.use('/about-concat', concat);
+app.use('/property-finacial', finacial);
+app.use('/property-banking', banking);
+app.use('/property-syonline', syonline);
 
 /*详情页面*/
 app.use(detail);
