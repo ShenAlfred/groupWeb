@@ -1,0 +1,192 @@
+
+
+
+@media screen and (max-width: 991px) {
+    .footer .footer-top{
+        height: 90px;
+        background-color: #2E2E2E;
+        width: 100%;
+    }
+    .footer-top .main{
+        overflow: visible;
+        position: relative;
+        width: 100%;
+    }
+    .footer .footer-bottom{
+        height: 110px;
+        background-color: #222222;
+        width: 100%;
+    }
+    .footer .address{
+        padding-top:30px;
+        color: #818181;
+        width: 100%;
+    }
+
+    .footer .copyRight{
+        padding-top:20px;
+        color: #5C5C5C;
+        position: relative;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer .footer-top{
+        height: 90px;
+        background-color: #2E2E2E;
+        width: 100%;
+    }
+    .footer-top .main{
+        overflow: visible;
+        position: relative;
+        width: 100%;
+    }
+    .footer .footer-bottom{
+        height: 110px;
+        background-color: #222222;
+        width: 100%;
+    }
+    .footer .address{
+        padding-top:30px;
+        color: #818181;
+        width: 100%;
+    }
+
+    .footer .copyRight{
+        padding-top:20px;
+        color: #5C5C5C;
+        position: relative;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 992px) {
+    .footer .footer-top{
+        height: 90px;
+        background-color: #2E2E2E;
+    }
+    .footer-top .main{
+        overflow: visible;
+        position: relative;
+    }
+    .footer .footer-bottom{
+        height: 110px;
+        background-color: #222222;
+    }
+    .footer .address{
+        padding-top:30px;
+        color: #818181;
+    }
+
+    .footer .copyRight{
+        padding-top:20px;
+        color: #5C5C5C;
+        position: relative;
+    }
+
+
+}
+
+.footer{
+    width: 100%;
+    font-size:16px;
+    /*margin-top:40px;*/
+    overflow: visible;
+}
+
+.footer .er{
+    position:absolute;
+    right:0px;
+    top:0px;
+    display:none;
+}
+.er img{
+    height: 123px;
+    width: 123px;
+}
+
+.footer .link {
+    font:16px/90px "Microsoft YaHei";
+    line-height:90px;
+    color: #565656;
+}
+.footer .link a{
+    color: #606060;
+}
+@media screen and (max-width: 991px) {
+    .footer .QR{
+        margin-top:20px;
+        margin-right: 50px;
+
+    }
+}
+@media screen and (min-width: 992px) {
+    .footer .QR {
+        margin-top:20px;
+    }
+}
+
+.footer .footer-bottom{
+    line-height:1;
+
+}
+
+.footer .copyRight a{
+    color: #5C5C5C;
+    position: relative;
+}
+.footer .copyRight:before{
+    content: 'C';
+    width: 14px;
+    height: 14px;
+    -webkit-border-radius:14px;
+    -moz-border-radius:14px;
+    border-radius:14px;
+    display: inline-block;
+    border:1px solid #5C5C5C;
+    position: absolute;
+    text-align: center;
+    left: 100px;
+
+
+}
+.footer .copyRight #safe:before,.footer .copyRight #safe:after{
+    content: '';
+    display: block;
+    position: absolute;
+}
+.footer .copyRight #safe:before{
+    width: 50px;
+    height: 12px;
+    background: url("../images/sprite.png") 0 -49px;
+    top: 4px;
+    left: 14px;
+}
+
+.footer .copyRight #safe:after{
+    width: 20px;
+    height: 23px;
+    background:url("../images/sprite.png") 0 -64px;
+    left: 76px;
+    top: -4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

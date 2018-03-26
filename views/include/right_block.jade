@@ -1,0 +1,17 @@
+.commontabContent.fl.clearfix
+    .detail-img
+        .detail-text #{navigationBar[activeIndex].barResList[activeIndex_two].name}
+        img.imghead(src="#{navigationBar[activeIndex].barResList[activeIndex_two].picUrl}" alt="#{navigationBar[activeIndex].barResList[activeIndex_two].title}")
+    .about-detail
+        .detail-artical
+            case wherePage
+                when 'about'
+                    include ../about/about_content
+                when 'about-architecture'
+                    include ../about/architecture_content
+                when 'about-team'
+                    include ../about/team_content
+                when 'about-event'
+                    include ../about/event_content
+                when 'event-detail'
+                    include ../detail/event_detail

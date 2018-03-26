@@ -1,0 +1,8 @@
+.commonTab.fl
+    .commonTab-title 关于商赢
+    ul.clearfix.tabChange
+        each nav in navigationBar[activeIndex].barResList
+            li
+                a(href="/#{nav.url}") #{nav.name}
+    .tabMa
+        img(src="/images/qrcode2.jpg" alt="商赢集团官方微信二维码")

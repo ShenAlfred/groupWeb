@@ -1,0 +1,19 @@
+.header
+    .main.clearfix
+        .logo.fl
+            a(href="/")
+                img(src="/images/logo.png" alt="商赢集团")
+        .fr
+            #common-nav.common-nav.fl
+                ul.clearfix.common-navul
+                    each nav, index in navigationBar
+                        li
+                            a.nav-index(href="/#{nav.url}") #{nav.name}
+                            div.list-group
+                                each child in nav.barResList
+                                    .list-item
+                                        a.at(href="/#{child.url}") #{child.name}
+            .version-change.fl
+                a.active(href="/") 中文
+                span &nbsp;|&nbsp;
+                a(href="/en") English

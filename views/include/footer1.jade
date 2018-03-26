@@ -1,0 +1,19 @@
+.footer-top
+    .main.clearfix
+        #links.link.fl
+            span 友情链接&nbsp;:&nbsp;
+            each link, index in links
+                if link.url == ""
+                    if index != links.length-1
+                        span #{link.name} &nbsp;| &nbsp;
+                    else
+                        span #{link.name}
+                else
+                    if index != links.length-1
+                        a(target="_blank" href="#{link.url}") #{link.name} &nbsp;| &nbsp;
+                    else
+                        a(target="_blank" href="#{link.url}") #{link.name}
+        .QR.fr
+            img(src="images/Qg.png" alt="商赢集团官方微信二维码")
+            .er
+                img(src="images/qrcode2.jpg" alt="商赢集团官方微信二维码")

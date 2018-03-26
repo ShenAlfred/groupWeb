@@ -1,0 +1,9 @@
+.line
+ul#contents.teamlist.clearfix
+    each person in content
+        li.clearfix
+            div.team-warp
+                .name
+                    span.team-name #{person.name}
+                    span.team-position #{person.position}
+                p.thing #{person.profiles}

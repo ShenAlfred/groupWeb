@@ -1,0 +1,140 @@
+
+.header{
+    height: 100px;
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+}
+.header .logo{
+    padding-top:14px;
+}
+.header .logo a{
+    display: block;
+}
+
+@media screen and (max-width: 991px) {
+    .header .main{
+        overflow:visible;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .header .main{
+        overflow:visible;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 992px) {
+    .header .main{
+        overflow:visible;
+    }
+
+}
+.header .common-nav {
+    padding-right: 40px;
+}
+.header .common-nav ul{
+    position: relative;
+}
+.header .common-nav ul:before{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 0;
+    height: 0;
+    border-bottom: 6px solid #FFFFFF;
+    border-left: 6px solid transparent;
+    z-index: 9;
+
+}
+.header .common-nav li{
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.header .common-nav li .nav-index{
+    width: 106px;
+    height: 95px;
+    font:18px/95px "Microsoft YaHei";
+    color: #333333;
+    border-bottom:5px solid #F1472D;
+    border-left: 5px solid transparent;
+    margin-left:-5px;
+    /*border-right:5px solid transparent;*/
+    float: left;
+}
+.header .common-nav li .nav-index{
+    width: 110px;
+}
+.header .common-nav li .nav-last{
+    position: relative;
+}
+
+.header .common-nav li .nav-index:hover{
+    color: #F1472D;
+    text-decoration: none;
+    border-bottom:5px solid #FFBE63;
+    border-left: 5px solid transparent;
+}
+.header .common-nav li.active .nav-index{
+    color: #F1472D;
+    text-decoration: none;
+    border-bottom:5px solid #FFBE63;
+    border-left: 5px solid transparent;
+}
+.header .common-nav li .list-group{
+    position: absolute;
+    top: 95px;
+    left: -20px;
+    /*width: 100%;*/
+    width: 154px;
+    z-index: 99;
+    display: none;
+}
+.header .common-nav li:hover .list-group{
+    display: block;
+}
+.header .common-nav .list-group .list-item{
+
+}
+.header .common-nav .list-group .at{
+    /*font-size:16px;*/
+    /*color: #222222;*/
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    background-color: #fff;
+    border-top:1px solid #eaeaea;
+    border-bottom:0 none;
+}
+.header .common-nav .list-group .at:hover{
+    background-color:#fafafa;
+
+}
+.about-title span{
+    cursor:pointer;
+}
+
+.imghead{
+    width: 740px;
+    height: 210px;
+}
+
+.imgcenter{
+    width: 200px;
+    height: 130px;
+}
+
+.version-change {
+    padding-top: 38px;
+    font-size: 14px;
+}
+.version-change a {
+    color: #c9c9c9;
+}
+.version-change span, .version-change a.active{
+    color: #707070;
+}

@@ -1,0 +1,18 @@
+.about-event
+    .line
+    .event
+        .today
+            img(src="./images/time.png" alt="时间")
+        .year-item
+            each event in content
+                .event-item
+                    .year   #{event.year}
+                    .item-con
+                        each eventItem in event.monthEventList
+                            .month-detail.clearfix
+                                i
+                                .month.fl #{eventItem.month}
+                                .detail.fl
+                                    each eventItemText in eventItem.eventChronicleArrayList
+                                        p
+                                            a(href="/about/event/#{eventItemText.id}") #{eventItemText.title}
