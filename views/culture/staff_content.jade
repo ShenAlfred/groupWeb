@@ -1,0 +1,13 @@
+.about-detail.staff
+    .line
+    .staff-list
+        each staff in content
+            .staff-img
+                .staff-title
+                    .fl.acontent #{staff.name}
+                    a.fr(href="/culture/staff/#{staff.id}") 更多
+                .staff-content
+                    ul.clearfix
+                        each img, index in staff.picUrlList
+                            li
+                                img(src="#{img}" alt="#{staff.name}")

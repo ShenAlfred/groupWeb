@@ -1,0 +1,9 @@
+.line
+.about-detail.trends
+    ul.video-list.videoData
+        each video in content
+            li
+                a(href="/news/video/#{video.id}")
+                    img(src="#{video.coverPhotoUrl}" alt="#{video.title}" width="215" height="120")
+                    .site-piclist_info
+                        p #{video.title}

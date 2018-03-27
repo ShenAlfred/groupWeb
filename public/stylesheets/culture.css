@@ -1,0 +1,109 @@
+.about-detail.culture li{
+    padding:30px 0;
+    border-top:1px solid #eaeaea;
+    border-bottom:0 none;
+}
+
+.about-main .about-detail.staff .detail-artical{
+    padding-right: 40px;
+}
+.about-detail.culture li:hover{
+    background-color: #ffffff;
+    cursor: default;
+}
+.about-detail.staff .line{
+    margin-bottom:0;
+}
+.about-detail.staff .staff-img{
+    padding-bottom: 30px;
+    border-top:1px solid #eaeaea;
+}
+.about-detail.staff .staff-title{
+    height: 54px;
+    line-height: 54px;
+}
+.about-detail.staff .staff-content{
+    /*overflow: hidden;*/
+}
+.about-detail.staff .staff-content ul{
+    width: 700px;
+}
+.about-detail.staff .staff-content li{
+    width: 160px;
+    height: 110px;
+    margin-right:10px;
+    float: left;
+    cursor: pointer;
+}
+.about-detail.staff .staff-content li img{
+    width: 100%;
+    height: 100%;
+}
+.about-detail.staff .staff-content li:hover{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border:4px solid #ffbf64;
+    -moz-box-shadow:3px 5px 10px #d5d5d5;
+    -webkit-box-shadow:3px 5px 10px #d5d5d5;
+    box-shadow:3px 5px 10px #d5d5d5;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#d5d5d5', Direction=125, Strength=9);
+}
+
+
+
+
+
+/*详情页*/
+
+.staff-content.staffdetail{
+
+}
+.about-detail.staffdetail .staff-title{
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+}
+.about-detail.staffdetail .staff-title h4{
+    text-align: center;
+    font-size:24px;
+    font-weight:500;
+}
+.about-detail.staffdetail .staff-container{
+    border-top:1px solid #eaeaea;
+    /*overflow: hidden;*/
+    width: 630px;
+    overflow: hidden;
+}
+.about-detail.staffdetail .staff-slide{
+    /*float: left;*/
+    width: 560px;
+    padding:50px 70px 0 70px;
+}
+.about-detail.staffdetail  li{
+    width: 256px;
+    height: 180px;
+    margin-right:24px;
+    margin-bottom: 20px;
+    float: left;
+    cursor: pointer;
+}
+.about-detail.staffdetail .pagination-bottom{
+    position: relative;
+}
+.about-detail.staffdetail .pagination{
+    bottom: 0px;
+    left: 4%;
+    position: relative;
+}
+.about-detail.staffdetail .swiper-pagination-switch{
+    background-color: #d5d3d3;
+}
+.about-detail.staffdetail .swiper-active-switch{
+    background-color: #F1472D;
+}
+.about-detail.staffdetail .staff-container .back{
+    margin-top:40px;
+    text-decoration: underline;
+    color: #666666;
+}

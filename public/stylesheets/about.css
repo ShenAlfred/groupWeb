@@ -268,7 +268,7 @@
     margin-top:28px;
 }
 .about-main .about-detail {
-    width: 738px;
+    /*width: 738px;*/
     /*background-color:#F5F5F5;*/
     margin-bottom:40px;
 }
@@ -300,6 +300,7 @@
 .about-main .detail-artical{
     background: #ffffff;
     padding:30px 30px 30px 26px;
+    min-height: 500px;
 }
 .about-main .detail-artical .logo{
     margin-bottom:44px;

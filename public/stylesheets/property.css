@@ -1,0 +1,11 @@
+.about-main .propertity-title{
+    line-height: 1;
+    height: 26px;
+}
+.about-main .propertity-content{
+    letter-spacing:1px;
+    margin-top: 25px;
+}
+.about-main .propertity-content p{
+    margin-bottom:26px;
+}

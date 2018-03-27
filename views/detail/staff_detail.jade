@@ -1,0 +1,10 @@
+.about-detail.staff1.staffdetail
+    .line
+    .staff-img
+        .staff-title
+            h4.acontent #{content.name}
+        .staff-container
+            ul.staff-slide.clearfix
+                each img in content.picUrlList
+                    li
+                        img(src="#{img}" alt="#{content.name}")

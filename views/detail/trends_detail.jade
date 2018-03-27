@@ -1,0 +1,17 @@
+.line
+.about-event
+    .detail-artical
+        .newsdetail
+            .newsdetail-title.at  #{content.title}
+            div.newsdetail-info.ac !{content.content}
+        .title-bottom
+            a(href="javascript:window.history.go(-1);") 返回上一级
+        .total_about_commend
+            .detail-artical
+                .about_commend  相关推荐
+                #relateInfo.xline-xx
+                    each relatedNews in content.relatedNewsList
+                        .clearfix.relateInfo_item(style='width:100%;')
+                            a.fl(href="/news/media/#{relatedNews.id}") #{relatedNews.title}
+                            span.fr #{relatedNews.dateTime}
+                        .xline

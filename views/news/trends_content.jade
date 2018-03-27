@@ -1,0 +1,15 @@
+.line
+.about-detail.trends
+    ul
+        each news in content
+            li.clearfix.newsJumpLink
+                if news.contentUrl
+                    a(href="#{news.contentUrl}" target="_blank" rel="nofollow")
+                else
+                    a(href="/news/media/#{news.id}")
+                        .trends-img.fl
+                        p.trends-text
+                            span.trends-title.at.light_a #{news.title}
+                            span.fr.ac  #{news.dateTime}
+                            p.trends-source #{news.newsSources}
+                            p.trends-content.ac.text-over2  !{news.desc}

@@ -10,12 +10,21 @@ var about = require('./routes/about');
 var architecture = require('./routes/architecture');
 var team = require('./routes/team');
 var event = require('./routes/event');
-var detail = require('./routes/detail');
 var aptitude = require('./routes/aptitude');
 var concat = require('./routes/concat');
 var finacial = require('./routes/finacial');
 var banking = require('./routes/banking');
 var syonline = require('./routes/syonline');
+var media = require('./routes/media');
+var trends = require('./routes/trends');
+var video = require('./routes/video');
+var culture = require('./routes/culture');
+var staff = require('./routes/staff');
+var event_detail = require('./routes/event_detail');
+var media_detail = require('./routes/media_detail');
+var trends_detail = require('./routes/trends_detail');
+var video_detail = require('./routes/video_detail');
+var staff_detail = require('./routes/staff_detail');
 
 var app = express();
 
@@ -42,9 +51,18 @@ app.use('/about-concat', concat);
 app.use('/property-finacial', finacial);
 app.use('/property-banking', banking);
 app.use('/property-syonline', syonline);
+app.use('/news-media', media);
+app.use('/news-trends', trends);
+app.use('/news-video', video);
+app.use('/culture', culture);
+app.use('/culture-staff', staff);
 
 /*详情页面*/
-app.use(detail);
+app.use(event_detail);
+app.use(media_detail);
+app.use(trends_detail);
+app.use(video_detail);
+app.use(staff_detail);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
