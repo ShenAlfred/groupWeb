@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9d019ea-b05c-4c66-8444-9fb4269f25e5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/item1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/property.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/media.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/trends.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/video.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/mainview/trends.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/mainview/video.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/news/media_content.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/news/news_layout.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/news/trends_content.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/news/video_content.jade" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/other/symap.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/routes/detail.js" afterPath="$PROJECT_DIR$/routes/event_detail.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/about.css" afterPath="$PROJECT_DIR$/public/stylesheets/about.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/news.css" afterPath="$PROJECT_DIR$/public/stylesheets/news.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/detail/article.jade" afterPath="$PROJECT_DIR$/views/detail/article.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/detail/detail_layout.jade" afterPath="$PROJECT_DIR$/views/detail/detail_layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/include/right_block.jade" afterPath="$PROJECT_DIR$/views/include/right_block.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/property/banking_content.jade" afterPath="$PROJECT_DIR$/views/property/banking_content.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/property/finacial_content.jade" afterPath="$PROJECT_DIR$/views/property/finacial_content.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/property/syonline_content.jade" afterPath="$PROJECT_DIR$/views/property/syonline_content.jade" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -523,12 +499,12 @@
       <workItem from="1522026514440" duration="103000" />
       <workItem from="1522029703990" duration="4994000" />
       <workItem from="1522035515312" duration="19819000" />
-      <workItem from="1522113172032" duration="19742000" />
+      <workItem from="1522113172032" duration="19837000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81282000" />
+    <option name="totallyTimeSpent" value="81377000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
