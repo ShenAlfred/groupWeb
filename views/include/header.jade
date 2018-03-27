@@ -8,11 +8,11 @@
                 ul.clearfix.common-navul
                     each nav, index in navigationBar
                         li
-                            a.nav-index(href="/#{nav.url}") #{nav.name}
+                            a.nav-index(href="#{nav.url}") #{nav.name}
                             div.list-group
                                 each child in nav.barResList
                                     .list-item
-                                        a.at(href="/#{child.url}") #{child.name}
+                                        a.at(href="#{child.url}") #{child.name}
             .version-change.fl
                 a.active(href="/") 中文
                 span &nbsp;|&nbsp;

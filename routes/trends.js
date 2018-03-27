@@ -12,10 +12,17 @@ http.get('http://gsite.shangyingjt.com/api/navigationBar', function(req, res) {
         var _json = JSON.parse(result);
         navigationBar = _json.data;
         navigationBar.forEach(function(item,index) {
-            navigationBar[index].url = item.url.split(".")[0];
+            if(/\//.test(item.url)) {
+                navigationBar[index].url = item.url;
+            }
+            else if( !(/http:\/\//.test(item.url))) {
+                navigationBar[index].url = "/"+item.url.split(".")[0];
+            }
             if(navigationBar[index].barResList.length > 0) {
                 navigationBar[index].barResList.forEach(function(item, i) {
-                    navigationBar[index].barResList[i].url = item.url.split(".")[0];
+                    if( !(/http:\/\//.test(item.url)) ) {
+                        navigationBar[index].barResList[i].url = "/"+item.url.split(".")[0];
+                    }
                 });
             }
         });
@@ -35,17 +42,14 @@ http.get('http://gsite.shangyingjt.com/api/newsList/1', function(req, res) {
 
 router.get('/', function(req, res, next) {
 
-    var path = req.baseUrl.split("/");
     navigationBar.forEach(function(item, index) {
-        if(path[1].match(item.url.split(/[-]?.html/)[0].split("-")[0])) {
+        if(req.baseUrl.match(item.url.split(/[-]?.html/)[0].split("-")[0])) {
             activeIndex = index;
-            console.log("one" + activeIndex)
         }
         if(item.barResList.length) {
             item.barResList.forEach(function(item, index) {
-                if(req.baseUrl === "/"+item.url.split(/[-]?.html/)[0]) {
+                if(req.baseUrl === item.url.split(/[-]?.html/)[0]) {
                     activeIndex_two = index;
-                    console.log("two:" + activeIndex_two)
                 }
             })
         }
