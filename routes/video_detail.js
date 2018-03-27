@@ -69,6 +69,7 @@ router.get('/news/video/:id', function(req, res, next) {
         });
     });
 
+
     navigationBar.forEach(function(item, index) {
 
         if( ("/"+path[1]).match(item.url.split("-")[0]) ) {
