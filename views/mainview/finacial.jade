@@ -3,6 +3,7 @@ extends ../property/property_layout
 block content
     include ../include/header
     input#activeIndex(type="hidden" value="#{activeIndex}")
+    input#activeIndex_two(type="hidden" value="#{activeIndex_two}")
     .about-main
         .main.clearfix
             .about-title
@@ -15,3 +16,4 @@ block content
         include ../include/footer2
 
     script(src="/javascripts/lib/jquery-1.8.3.min.js")
+    script(src="/javascripts/common.js")

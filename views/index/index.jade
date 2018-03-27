@@ -2,6 +2,8 @@ extends index_layout
 
 block content
     include ../include/header
+    input#activeIndex(type="hidden" value="#{activeIndex}")
+    input#activeIndex_two(type="hidden" value="#{activeIndex_two}")
     .index-banner.swiper-container
       .swiper-wrapper
         each list in bannerList
@@ -21,3 +23,4 @@ block content
     script(src="javascripts/lib/jwplayer.js")
     script(src="javascripts/lib/jwplayer.html5.js")
     script(src="javascripts/index.js")
+    script(src="javascripts/common.js")

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var http = require('http');
-var bannerList, navigationBar, industriesList, news, video,links;
+var bannerList, navigationBar, industriesList, news, video,links,activeIndex;
 var aboutLink, aboutText;
 
 http.get('http://gsite.shangyingjt.com/api/navigationBar', function(req, res) {
@@ -69,6 +69,7 @@ router.get('/', function(req, res, next) {
       industriesList: industriesList,
       news: news,
       video: video,
+      activeIndex: 0,
       aboutLink: aboutLink,
       aboutText: aboutText,
       links: links
