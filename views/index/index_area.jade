@@ -5,18 +5,18 @@
                 .title
                     h3
                         a(href="#{aboutLink}") 关于商赢
-                p#p.p
-                    a(href="#{aboutLink}").aboutcontent #{aboutText}
-                p.more
-                    a(href="#{aboutLink}") 查看更多
+                div.p
+                    a(href="/#{aboutLink}").aboutcontent !{aboutText}
+                div.more
+                    a(href="/#{aboutLink}") 查看更多
             li.product
                 .title
                     h3
-                        a(href="#{industriesList[0].url}") 商赢产业
+                        a(href="/#{industriesLink}") 商赢产业
                 .product-concat
                     each industries in industriesList
                         .product-detail
-                            a(href="#{industries.url}")
+                            a(href="/#{industries.url}")
                                 img(src="#{industries.picUrl}" alt="#{industries.title}")
                                 span.text #{industries.title}
                                 a.arrow
@@ -42,12 +42,12 @@
                             each brief in news.briefList
                                 if brief.newsSources == ""
                                     div
-                                        a.news_detail_link(href="news_#{brief.id}.html")
+                                        a.news_detail_link(href="/news/media/#{brief.id}")
                                             p.over #{brief.title}
                                 else
                                     div.clearfix
                                         p#news_details_source.fl [#{brief.newsSources}]
-                                        a.fl.news_details_link(href="news_#{brief.id}.html")
+                                        a.fl.news_details_link(href="/news/media/#{brief.id}")
                                             p.news_details.over #{brief.title}
                         p.more
                             a(href="#{news.url}") 查看更多

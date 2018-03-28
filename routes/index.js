@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var http = require('http');
-var bannerList, navigationBar, industriesList, news, video,links,activeIndex;
+var bannerList, navigationBar, industriesList, news, video,links, industriesLink;
 var aboutLink, aboutText;
 
 http.get('http://gsite.shangyingjt.com/api/navigationBar', function(req, res) {
@@ -39,10 +39,16 @@ http.get('http://gsite.shangyingjt.com/api/homePage', function(req, res) {
         var _json = JSON.parse(result);
         bannerList = _json.data.bannerList;
         industriesList = _json.data.industriesList;
+        industriesList.forEach(function(item, index) {
+            industriesList[index].url = item.url.split('.')[0];
+        });
         news = _json.data.news;
+        news.url = news.url.split('.')[0];
         video = _json.data.video;
-        aboutLink = _json.data.aboutCommpanUrl;
+        video.url = video.url.split('.')[0];
+        aboutLink = _json.data.aboutCommpanUrl.split(".")[0];
         aboutText = _json.data.aboutCommpanyDesc;
+        industriesLink = industriesList[0].url.split('.')[0];
     });
 });
 
@@ -72,6 +78,7 @@ router.get('/', function(req, res, next) {
       activeIndex: 0,
       aboutLink: aboutLink,
       aboutText: aboutText,
+      industriesLink: industriesLink,
       links: links
   });
 });

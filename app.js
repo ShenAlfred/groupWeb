@@ -20,6 +20,7 @@ var trends = require('./routes/trends');
 var video = require('./routes/video');
 var culture = require('./routes/culture');
 var staff = require('./routes/staff');
+var sitemap = require('./routes/sitemap');
 var event_detail = require('./routes/event_detail');
 var media_detail = require('./routes/media_detail');
 var trends_detail = require('./routes/trends_detail');
@@ -57,6 +58,7 @@ app.use('/news-trends', trends);
 app.use('/news-video', video);
 app.use('/culture', culture);
 app.use('/culture-staff', staff);
+app.use('/sitemap', sitemap);
 
 app.use('/news/media/list', list);
 app.use('/news/trends/list', list);

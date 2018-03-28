@@ -1,0 +1,10 @@
+.map-detail
+    .line.clearfix
+        .line1
+        .line2
+    .page
+        each nav, index in navigationBar
+            .pageDetail
+                a(href="#{navigationBar[index].url}").pageTitle #{navigationBar[index].name}
+                    each child in nav.barResList
+                        a(href="#{child.url}") #{child.name}

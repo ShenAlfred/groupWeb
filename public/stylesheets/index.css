@@ -139,14 +139,12 @@
 
     .index-detail .about .p {
         padding-top: 12px;
-        /*height: 180px;*/
         height: 228px;
         width: 318px;
         line-height: 30px;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        /*-webkit-line-clamp: 7;*/
         -webkit-line-clamp: 7;
         -ms-line-clamp: 7;
         font-size: 14px;
@@ -181,13 +179,16 @@
         display: block;
     }
 
-    .index-detail p.more a {
-        padding-top: 24px;
+    .index-detail .more {
+        padding-top: 12px;
+    }
+
+    .index-detail .more a {
         color: #4489C9;
         font-size: 14px;
     }
 
-    .index-detail p.more a:hover {
+    .index-detail .more a:hover {
         color: #F1472D;
     }
 

@@ -1,0 +1,84 @@
+.map-container .pageTitle{
+    font:bold 18px/1 "Microsoft YaHei";
+    margin-right:50px;
+}
+
+.map-container{
+    /*background-color: #F1F1F1;*/
+    height: 756px;
+}
+.map-container .map-title{
+    height: 70px;
+    font:16px/70px "Microsoft YaHei";
+    color: #999999;
+}
+.map-container .map-title span{
+
+    cursor: pointer;
+}
+.map-container .map-detail{
+    background-color: #fff;
+    width: 1000px;
+    height: 634px;
+    padding:80px 0 0 80px;
+}
+.map-container .map-detail .line{
+    /*width: 676px;*/
+    /*height: 10px;*/
+    float: left;
+    /*background-color: #fff;*/
+}
+.map-container .map-detail .line1{
+    height: 2px;
+    width: 82px;
+    background-color: #FFBE63;
+    /*vertical-align: middle;*/
+}
+.map-container .page{
+    padding:0;
+    text-align: left;
+}
+.map-container .page a{
+    padding:0;
+    /*margin:0;*/
+}
+.map-container .map-detail .line2{
+    background-color: #F1472D;
+    height: 2px;
+    width: 594px;
+    margin-left:82px;
+    margin-top:-2px;
+    /*vertical-align: middle;*/
+}
+.map-container .pageDetail{
+    padding-top:46px;
+    line-height: 1;
+}
+.map-container a{
+    color: #494949;
+    font:16px/1 'Microsoft YaHei';
+    margin-right:20px;
+}
+.map-container a:hover{
+    color: #F1472E;
+}
+.map-container .page .pageTitle {
+    font: bold 18px/1 "Microsoft YaHei";
+    margin-right: 50px;
+    margin-left:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
