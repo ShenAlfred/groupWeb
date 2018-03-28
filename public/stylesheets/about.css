@@ -160,7 +160,7 @@
     background-color: #F5F5F5;
 }
 
-.about-main .about-title{
+.about-main .about-title, .about-main .about-title a{
     height: 56px;
     font:16px/56px "MicrosoftYaHei";
     color: #999999;
