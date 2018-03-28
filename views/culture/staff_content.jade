@@ -1,7 +1,7 @@
 .about-detail.staff
     .line
     .staff-list
-        each staff in content
+        each staff in content.resultList
             .staff-img
                 .staff-title
                     .fl.acontent #{staff.name}
@@ -11,3 +11,4 @@
                         each img, index in staff.picUrlList
                             li
                                 img(src="#{img}" alt="#{staff.name}")
+    include ../include/page

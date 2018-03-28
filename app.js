@@ -61,6 +61,7 @@ app.use('/culture-staff', staff);
 app.use('/news/media/list', list);
 app.use('/news/trends/list', list);
 app.use('/news/video/list', list);
+app.use('/culture/staff/list', list);
 
 /*详情页面*/
 app.use(event_detail);

@@ -42,6 +42,7 @@ function getMews(url, level, level2) {
                 contentDetail.level_name = level;
                 contentDetail.level2_name = level2;
                 contentDetail.currentViewIndex = _json.iPage;
+                console.log(contentDetail);
                 if(_json.iPage < _json.pageCount){
                     if(_json.pageCount >= 5){
                         if(_json.iPage < 5) {
@@ -85,6 +86,10 @@ router.get('/:id', function(req, res, next) {
     if(path[2] == "video") {
         apiUrl = 'http://gsite.shangyingjt.com/api/videoList/?pageSize=6&iPage='+ page_num;
     }
+    if(path[2] == "staff") {
+        apiUrl = 'http://gsite.shangyingjt.com/api/style?pageSize=3&iPage=' + page_num;
+    }
+
 
     getMews(apiUrl,path[1],path[2]).then(function(data) {
         navigationBar.forEach(function(item, index) {
@@ -107,7 +112,7 @@ router.get('/:id', function(req, res, next) {
             navigationBar: navigationBar,
             activeIndex: activeIndex,
             activeIndex_two: activeIndex_two,
-            wherePage: 'news-'+path[2]
+            wherePage: path[1]+'-'+path[2]
         });
     });
 });
