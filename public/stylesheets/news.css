@@ -32,6 +32,16 @@
     text-indent: 16px;
     color:#666;
 }
+.newsJumpLink.noimg .trends-source{
+    margin-left:0;
+    background: url("../images/item1.jpg") no-repeat left center;
+    text-indent: 16px;
+    padding-left: 10px;
+    color:#666;
+}
+.newsJumpLink .trends-source {
+    margin-left: 0
+}
 .about-main .newsJumpLink .trends-text {
     margin-bottom: 10px;
 }
@@ -101,9 +111,10 @@
 .about-detail.media li {
     cursor: pointer;
     border-bottom: 1px solid #eaeaea;
-    padding-bottom:20px;
-    padding-right:30px;
     padding:20px 3px 20px 0;
+}
+.about-detail.media li:first-child {
+    padding: 0 3px 20px 0;
 }
 .about-detail.media li:hover{
     background-color: #fafafa;

@@ -1,10 +1,16 @@
 .line
 .about-detail.trends
     ul
-        each news in content
+        each news in content.resultList
             li.clearfix.newsJumpLink
                 if news.contentUrl
                     a(href="#{news.contentUrl}" target="_blank" rel="nofollow")
+                        .trends-img.fl
+                        p.trends-text
+                            span.trends-title.at.light_a #{news.title}
+                            span.fr.ac  #{news.dateTime}
+                            p.trends-source #{news.newsSources}
+                            p.trends-content.ac.text-over2  !{news.desc}
                 else
                     a(href="/news/trends/#{news.id}")
                         .trends-img.fl
@@ -13,3 +19,4 @@
                             span.fr.ac  #{news.dateTime}
                             p.trends-source #{news.newsSources}
                             p.trends-content.ac.text-over2  !{news.desc}
+    include ../include/page

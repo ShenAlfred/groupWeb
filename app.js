@@ -25,6 +25,7 @@ var media_detail = require('./routes/media_detail');
 var trends_detail = require('./routes/trends_detail');
 var video_detail = require('./routes/video_detail');
 var staff_detail = require('./routes/staff_detail');
+var list = require('./routes/list');
 
 var app = express();
 
@@ -56,6 +57,10 @@ app.use('/news-trends', trends);
 app.use('/news-video', video);
 app.use('/culture', culture);
 app.use('/culture-staff', staff);
+
+app.use('/news/media/list', list);
+app.use('/news/trends/list', list);
+app.use('/news/video/list', list);
 
 /*详情页面*/
 app.use(event_detail);

@@ -256,7 +256,7 @@ b{
     float: left;
     margin-left: 20px;
 }
-.button_text {
+a.button_text, .button_text {
     display: inline-block;
     padding: 0 12px;
     vertical-align: top;

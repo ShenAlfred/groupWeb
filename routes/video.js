@@ -29,14 +29,36 @@ http.get('http://gsite.shangyingjt.com/api/navigationBar', function(req, res) {
     });
 });
 
-http.get('http://gsite.shangyingjt.com/api/videoList', function(req, res) {
+http.get('http://gsite.shangyingjt.com/api/videoList/?pageSize=6&iPage=1', function(req, res) {
     var result = "";
     req.on('data', function(_result){
         result += _result;
     });
     req.on('end', function(){
         var _json = JSON.parse(result);
-        contentDetail = _json.resultList;
+        contentDetail = _json;
+        contentDetail.level_name = 'news';
+        contentDetail.level2_name = 'video';
+        contentDetail.currentViewIndex = _json.iPage;
+        if(_json.iPage < _json.pageCount){
+            if(_json.pageCount >= 5){
+                if(_json.iPage < 5) {
+                    contentDetail.begin = 1;
+                    contentDetail.end = 5;
+                }else{
+                    contentDetail.end = _json.iPage+1;
+                    contentDetail.begin = contentDetail.end-4
+                }
+            }else{
+                contentDetail.begin = 1;
+                contentDetail.end = _json.pageCount;
+            }
+        }else {
+            contentDetail.end = _json.pageCount;
+            contentDetail.begin = contentDetail.end-4;
+            if(contentDetail.begin < 1)
+                contentDetail.begin = 1;
+        }
     });
 });
 

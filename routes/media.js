@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var http = require('http');
-var contentDetail, navigationBar, activeIndex, activeIndex_two;
+var contentDetail, navigationBar, activeIndex, activeIndex_two, page;
 
 http.get('http://gsite.shangyingjt.com/api/navigationBar', function(req, res) {
     var result = "";
@@ -36,14 +36,35 @@ http.get('http://gsite.shangyingjt.com/api/newsList/2', function(req, res) {
     });
     req.on('end', function(){
         var _json = JSON.parse(result);
-        contentDetail = _json.resultList;
+        contentDetail = _json;
+        contentDetail.level_name = 'news';
+        contentDetail.level2_name = 'media';
+        contentDetail.currentViewIndex = _json.iPage;
+        if(_json.iPage < _json.pageCount){
+            if(_json.pageCount >= 5){
+                if(_json.iPage < 5) {
+                    contentDetail.begin = 1;
+                    contentDetail.end = 5;
+                }else{
+                    contentDetail.end = _json.iPage+1;
+                    contentDetail.begin = contentDetail.end-4
+                }
+            }else{
+                contentDetail.begin = 1;
+                contentDetail.end = _json.pageCount;
+            }
+        }else {
+            contentDetail.end = _json.pageCount;
+            contentDetail.begin = contentDetail.end-4;
+            if(contentDetail.begin < 1)
+                contentDetail.begin = 1;
+        }
     });
 });
 
 router.get('/', function(req, res, next) {
 
     navigationBar.forEach(function(item, index) {
-
         if(req.baseUrl.match(item.url.split(/[-]?.html/)[0])) {
             activeIndex = index;
         }
@@ -51,11 +72,10 @@ router.get('/', function(req, res, next) {
             item.barResList.forEach(function(item, index) {
                 if(req.baseUrl === item.url.split(/[-]?.html/)[0]) {
                     activeIndex_two = index;
-                    console.log("two:" + activeIndex_two)
                 }
             })
         }
-    })
+    });
 
     res.render('mainview/media', {
         title: '集团简介_关于商赢-商赢集团官网',
@@ -65,6 +85,7 @@ router.get('/', function(req, res, next) {
         navigationBar: navigationBar,
         activeIndex: activeIndex,
         activeIndex_two: activeIndex_two,
+        page: page,
         wherePage: 'news-media'
     });
 });

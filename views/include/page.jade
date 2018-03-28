@@ -1,0 +1,23 @@
+.page.ov
+    input(type="hidden" id="viewIndex" value="#{content.currentViewIndex}")
+    input(type="hidden" id="type" value="")
+    input(type="hidden" id="pageCount" value="")
+    input(type="hidden" id="dataId" value="")
+    if content.iPage > 1
+        a(href="/"+content.level_name+"/"+ content.level2_name +"/list/1").page_btn.home 首页
+        a(href="/"+content.level_name+"/"+ content.level2_name +"/list/#{content.currentViewIndex-1}").page_btn.prev 上一页
+    if content.iPage <= 1
+        .button_text.home 首页
+        .button_text.prev 上一页
+    if content.iPage >= 1
+        - for(var i=content.begin; i<=content.end; i++)
+            if content.iPage != i
+                a(href="/"+content.level_name+"/"+ content.level2_name +"/list/"+i).page_btn.num #{i}
+            if content.iPage == i
+                a(href="/"+ content.level_name+ "/"+ content.level2_name +"/list/"+i).button_text.num #{i}
+    if content.iPage != content.pageCount
+        a(href="/"+content.level_name+"/"+ content.level2_name +"/list/#{content.currentViewIndex+1}").page_btn.next 下一页
+        a(href="/"+content.level_name+"/"+ content.level2_name +"/list/#{content.pageCount}").page_btn.last 尾页
+    if content.iPage == content.pageCount
+        .button_text.next 下一页
+        .button_text.last 尾页
