@@ -1,0 +1,15 @@
+doctype html
+html
+    head
+        include ../include/tdk
+        link(rel='stylesheet', href='/stylesheets/reset.css')
+    body
+        input#h(type="hidden" value="#{mapHeight}")
+        input#w(type="hidden" value="#{mapWidth}")
+        input#lng(type="hidden" value="#{mapLng}")
+        input#lat(type="hidden" value="#{mapLat}")
+
+        #dituContent.dituContent(style="width: 100%; height: 100%; border:#ccc solid 1px;")
+
+        script(src="http://api.map.baidu.com/api?key=&v=1.1&services=true")
+        script(src="/javascripts/map.js")

@@ -12,15 +12,20 @@ http.get('http://gsite.shangyingjt.com/api/navigationBar', function(req, res) {
         var _json = JSON.parse(result);
         navigationBar = _json.data;
         navigationBar.forEach(function(item,index) {
-            if(/\//.test(item.url)) {
+            if(item.url.indexOf('http://') >= 0) {
+                navigationBar[index].outLink = 1;
+            }else if(item.url == "/") {
                 navigationBar[index].url = item.url;
             }
-            else if( !(/http:\/\//.test(item.url))) {
+            else if(!(/http:\/\//.test(item.url))) {
                 navigationBar[index].url = "/"+item.url.split(".")[0];
             }
             if(navigationBar[index].barResList.length > 0) {
                 navigationBar[index].barResList.forEach(function(item, i) {
-                    if( !(/http:\/\//.test(item.url)) ) {
+                    if(item.url.indexOf('http://') >= 0) {
+                        navigationBar[index].barResList[i].outLink = 1;
+                    }
+                    else if(!(/http:\/\//.test(item.url))) {
                         navigationBar[index].barResList[i].url = "/"+item.url.split(".")[0];
                     }
                 });
@@ -63,6 +68,8 @@ router.get('/', function(req, res, next) {
         navigationBar: navigationBar,
         activeIndex: activeIndex,
         activeIndex_two: activeIndex_two,
+        mapWidth: 300,
+        mapHeight: 154,
         wherePage: 'about-concat'
     });
 });
