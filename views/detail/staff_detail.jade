@@ -2,9 +2,10 @@
     .line
     .staff-img
         .staff-title
-            h4.acontent #{content.name}
+            h4.acontent #{content.data.name}
         .staff-container
             ul.staff-slide.clearfix
-                each img in content.picUrlList
+                each img in content.data.picUrlList
                     li
-                        img(src="#{img}" alt="#{content.name}")
+                        img(src="#{img}" alt="#{content.data.name}")
+include ../include/page

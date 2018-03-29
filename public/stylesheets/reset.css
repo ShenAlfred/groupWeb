@@ -210,20 +210,15 @@ b{
     position: relative;
     overflow: hidden;
 }
-.swiper-wrapper{
-    /*width: 12000px;*/
-    position: relative;
-}
-.swiper-slide{
-    /*width: 1920px;*/
-    float: left;
-}
 .pagination{
     position: absolute;
     z-index: 20;
     bottom: 16px;
     width: 100%;
     text-align: center;
+}
+.pagination span {
+    margin: 0 10px;
 }
 .swiper-pagination-switch{
     display: inline-block;
@@ -234,7 +229,15 @@ b{
     margin: 0 16px;
     cursor: pointer;
 }
-.swiper-active-switch{
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #fff;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
     background-color: #F1472D;
 }
 .detail-text {
@@ -266,6 +269,10 @@ a.button_text, .button_text {
     margin: 0 2px;
     font-size:16px;
     font-weight: bold;;
+}
+a.button_text:hover, .button_text:hover {
+    color: #93a1aa;
+    text-decoration: none;;
 }
 .tabMa img{
     height: 123px;

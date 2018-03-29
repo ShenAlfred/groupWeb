@@ -4,7 +4,7 @@
 
 $(function() {
 
-    var indexSwiper = new Swiper('.index-banner.swiper-container',{
+    new Swiper('.swiper-container',{
         loop: true,
         pagination : '.pagination',
         autoplay:3000,
