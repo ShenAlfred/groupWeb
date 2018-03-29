@@ -1,5 +1,4 @@
 var swiper_mask = $(".swiper-mask");
-var staff_swiper = $("#staff-swiper");
 var staff_slide = $(".staff-slide");
 var swiper_box = $(".swiper-box");
 var index, parent_index;

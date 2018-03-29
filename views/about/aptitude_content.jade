@@ -3,8 +3,19 @@
     .smallPic
         .aptitude-title #{content[0].typeDesc}
         .aptitude
-            ul.smallPic1.clearfix
+            ul.smallPic1.clearfix.aptitude-slide
                 each v in content
                     each pic in v.picList
                         li
                             img(src="#{pic.url}" alt="#{pic.title}")
+.swiper-mask
+    .swiper-box
+        .swiper-box-close
+        #aptitude-swiper.swiper-container
+            .swiper-wrapper
+                each pic in content[0].picList
+                    .swiper-slide
+                        .swiper-img-box
+                            img(src="#{pic.url}" alt="#{pic.title}")
+        .swiper-button-prev
+        .swiper-button-next
