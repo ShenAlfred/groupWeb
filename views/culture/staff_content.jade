@@ -1,14 +1,26 @@
 .about-detail.staff
     .line
     .staff-list
-        each staff in content.resultList
+        each staff, index in content.resultList
             .staff-img
                 .staff-title
                     .fl.acontent #{staff.name}
                     a.fr(href="/culture/staff/#{staff.id}") 更多
                 .staff-content
-                    ul.clearfix
+                    ul.clearfix.staff-slide(data-id="#{index}")
                         each img, index in staff.picUrlList
-                            li
+                            li(data-id="#{index}")
                                 img(src="#{img}" alt="#{staff.name}")
     include ../include/page
+.swiper-mask
+    each staff, index in content.resultList
+        .swiper-box(style="display:none")
+            .swiper-box-close
+            .swiper-container(id="staff-swiper#{index}")
+                .swiper-wrapper
+                    each img in staff.picUrlList
+                        .swiper-slide
+                            .swiper-img-box
+                                img(src="#{img}")
+            .swiper-button-prev
+            .swiper-button-next

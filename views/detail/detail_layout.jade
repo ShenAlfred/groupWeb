@@ -9,5 +9,8 @@ html
         link(rel='stylesheet', href='/stylesheets/news.css')
         link(rel='stylesheet', href='/stylesheets/culture.css')
         link(rel='stylesheet', href='/stylesheets/footer.css')
+        case wherePage
+            when 'staff-detail'
+                link(rel='stylesheet', href='/stylesheets/swiper.min.css')
     body
         block content
