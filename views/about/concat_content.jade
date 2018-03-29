@@ -13,7 +13,7 @@
     .map-detail
         ul.clearfix
             each company in content.companyList
-                li
+                li.company_box
                     img(src="#{company.picUrl}" alt="#{company.shortName}" style="width: 220px;height: 154px")
                     .refer
                         span.at #{company.shortName}

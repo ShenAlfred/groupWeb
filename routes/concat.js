@@ -68,6 +68,8 @@ router.get('/', function(req, res, next) {
         navigationBar: navigationBar,
         activeIndex: activeIndex,
         activeIndex_two: activeIndex_two,
+        popmapWidth: 400,
+        popmapHeight: 210,
         mapWidth: 300,
         mapHeight: 154,
         wherePage: 'about-concat'

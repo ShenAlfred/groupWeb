@@ -1,0 +1,13 @@
+.mapmask
+    .main
+        each map in content.companyList
+            .maskbig
+                span.mapclose X
+                .maskmap
+                    iframe(src="/symap?h=#{popmapHeight}&w=#{popmapWidth}&mapPoint=#{map.mapPoint}" height="#{popmapHeight}px" width="#{popmapWidth}px" scrolling="no" style="background-color: transparent;" marginwidth="0" marginheight="0" frameborder="0")
+                .maskmapline
+                .maskmap-content
+                    .maskmaptitle #{map.name}
+                    .maskmap-address    公司地址: #{map.address}
+                    .maskmap-tel    总机号码:   #{map.telephone}
+                    .maskmap-fax    传真号码:   #{map.fax}
