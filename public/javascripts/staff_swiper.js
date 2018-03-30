@@ -7,12 +7,8 @@
 
     var swiper = {
         object: null,
-        initialSlide: 0,
         initial: function() {
             this.object = new Swiper('#staff-swiper',{
-                initialSlide: this.initialSlide,
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev'
             });
         }
     };
@@ -25,7 +21,7 @@
         url: 'http://gsite.shangyingjt.com/api/style/'+id+"?pageSize=6&iPage="+1,
         success: function (response) {
             for(var j=0; j<response.data.picUrlList.length; j++) {
-                staff_swiper.find('.swiper-wrapper').append('<div class="swiper-slide"><div class="swiper-img-box"><img src="'+ response.data.picUrlList[j] +'" /></div></div>')
+                staff_swiper.find('.swiper-wrapper').append('<div class="swiper-slide"><div class="swiper-img-box"><img src="'+ response.data.picUrlList[j] +'" /><span></span></div></div>')
             }
 
             staff_slide.on('click', 'li', function() {
@@ -34,15 +30,20 @@
                 $("body").css({
                     overflow: 'overflow'
                 });
-                swiper.initialSlide = parseInt(index);
                 swiper.initial();
+                swiper.object.swipeTo(index, 0, false);
             });
         }
     });
+    $('.swiper-button-prev').click(function(){
+        swiper.object.swipePrev();
+    })
+    $('.swiper-button-next').click(function(){
+        swiper.object.swipeNext();
+    })
     //关闭swiper 并销毁
     swiper_mask.on('click', '.swiper-box-close', function() {
         swiper_mask.fadeOut(function() {
-            swiper.object.setWrapperTranslate(0);
             swiper.object.destroy();
         });
        $("body").css({
@@ -103,7 +104,7 @@
 
                 staff_swiper.find('.swiper-wrapper').empty();
                 for(var j=0; j<response.data.picUrlList.length; j++) {
-                    staff_swiper.find('.swiper-wrapper').append('<div class="swiper-slide"><div class="swiper-img-box"><img src="'+ response.data.picUrlList[j] +'" /></div></div>')
+                    staff_swiper.find('.swiper-wrapper').append('<div class="swiper-slide"><div class="swiper-img-box"><img src="'+ response.data.picUrlList[j] +'" /><span></span></div></div>')
                 }
                 swiper.initial();
             }

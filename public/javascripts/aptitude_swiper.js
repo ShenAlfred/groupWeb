@@ -3,15 +3,18 @@ var aptitude_slide = $(".aptitude-slide");
 
 var swiper = {
     object: null,
-    initialSlide: 0,
     initial: function() {
         this.object = new Swiper('#aptitude-swiper',{
-            initialSlide: this.initialSlide,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev'
         });
     }
 };
+
+$('.swiper-button-prev').click(function(){
+    swiper.object.swipePrev();
+})
+$('.swiper-button-next').click(function(){
+    swiper.object.swipeNext();
+})
 
 
 swiper_mask.on('click', '.swiper-box-close', function() {
@@ -30,6 +33,6 @@ aptitude_slide.on('click', 'li', function() {
         overflow: 'overflow'
     });
     swiper_mask.fadeIn();
-    swiper.initialSlide = parseInt(index);
     swiper.initial();
+    swiper.object.swipeTo(index, 0, false);
 });

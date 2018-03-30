@@ -44,6 +44,7 @@
 }
 .about-main .newsJumpLink .trends-text {
     margin-bottom: 10px;
+    overflow: hidden;
 }
 .about-main .newsJumpLink p {
     text-indent: 0;

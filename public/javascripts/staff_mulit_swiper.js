@@ -6,34 +6,25 @@ var index, parent_index;
 var swiper = [
     {
         object: null,
-        initialSlide: 0,
+        id: '#staff-swiper0',
         initial: function() {
             this.object = new Swiper('#staff-swiper0', {
-                initialSlide: this.initialSlide,
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev'
             });
         }
     },
     {
         object: null,
-        initialSlide: 0,
+        id: '#staff-swiper1',
         initial: function() {
             this.object = new Swiper('#staff-swiper1', {
-                initialSlide: this.initialSlide,
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev'
             });
         }
     },
     {
         object: null,
-        initialSlide: 0,
+        id: '#staff-swiper2',
         initial: function() {
             this.object = new Swiper('#staff-swiper2', {
-                initialSlide: this.initialSlide,
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev'
             });
         }
     }
@@ -47,8 +38,14 @@ staff_slide.on('click', 'li', function() {
     });
     swiper_mask.fadeIn();
     swiper_box.eq(parent_index).fadeIn();
-    swiper[parent_index].initialSlide = index;
-    swiper[parent_index].initial()
+    swiper[parent_index].initial();
+    swiper[parent_index].object.swipeTo(index, 0, false);
+    $("#staff-swiper"+parent_index).siblings('.swiper-button-prev').click(function() {
+        swiper[parent_index].object.swipePrev();
+    });
+    $("#staff-swiper"+parent_index).siblings('.swiper-button-next').click(function() {
+        swiper[parent_index].object.swipeNext();
+    })
 });
 
 //关闭swiper 并销毁
