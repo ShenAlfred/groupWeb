@@ -1,13 +1,13 @@
 .detail-artical-top.clearfix
     .line
     .dat-artical.artical_show
-        p !{content.content}
+        iframe(id="iframeId" name="myframe" src="/group_profile" width="670" height="220" data-height="220" scrolling="no" style="background-color: transparent;" frameborder="0")
 .detail-artical-bottom
     h2.dab-title #{content.moduleTitle}
     each module in content.moduleList
         .dab-detail.clearfix
             img(src="#{module.picUrl}" alt="#{module.title}")
             .dab-artical.fr
-                h3.dab-artical-title
+                h3.dab-artical-title #{module.title}
                 .dab-artical-detail #{module.profile}
-                a(href="#{module.url}") 查看更多
+                a(href="/#{module.url}") 查看更多

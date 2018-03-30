@@ -42,6 +42,9 @@ http.get('http://gsite.shangyingjt.com/api/groupProfile', function(req, res) {
     req.on('end', function(){
         var _json = JSON.parse(result);
         contentDetail = _json.data;
+        for(var i=0; i<contentDetail.moduleList.length; i++) {
+            contentDetail.moduleList[i].url = contentDetail.moduleList[i].url.split('.')[0];
+        }
     });
 });
 

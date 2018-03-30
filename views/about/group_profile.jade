@@ -1,0 +1,80 @@
+doctype html
+html
+    head
+        include ../include/tdk
+        link(rel='stylesheet', href='/stylesheets/about.css')
+        link(rel='stylesheet', href='/stylesheets/news.css')
+        style(type="text/css").
+            #btn-show{
+                color: #4489C9;
+                cursor:pointer;
+                font-family: "微软雅黑";
+            }
+            #btn-show:hover{
+                color: #F1472D;
+                cursor:pointer;
+            }
+            .button_hide{
+                text-align: center;
+                cursor: pointer;
+                font-family: "微软雅黑";
+                display: none;
+            }
+            .button_hide a{
+                color:#4489C9;
+            }
+            .button_hide a:hover{
+                color:#f00;
+            }
+    body
+
+        #iframe-con !{content.content}
+        .button_hide
+            a 收起全文
+        script(src="/javascripts/lib/jquery-1.8.3.min.js")
+        script(type="text/javascript").
+            window.onload = function() {
+                var $document = $("#iframe-con");
+                var text = $document.html();
+                var len;
+                if(text.indexOf("(显示全文)") >=0 ){
+                    len = text.indexOf("(显示全文)");
+                    text = text.replace("(显示全文)", '');
+                }
+                var newBox = $("<div class='newBox'></div>");
+                newBox.html(text.substring(0, len)+'......'+'<span id="btn-show">显示全文</span>');
+
+                $document.html('');
+                $document.append(newBox);
+                $("#btn-show").on('click', function() {
+                    $(this).remove();
+                    $(this).hide();
+                    $(".button_hide").css('display', 'block');
+                    newBox.html(text);
+                    //iframe自适应高度
+                    var main = $(window.parent.document).find("#iframeId");
+                    var thisheight = $(document).height() + 30;
+                    main.height(thisheight);
+                });
+
+                //点击收起全文
+                $('.button_hide').on('click', function () {
+                    $('.button_hide').css('display', 'none');
+                    newBox.html(text.substring(0, len) + '......' + '<span id="btn-show">显示全文</span>');
+
+                    var main = $(window.parent.document).find("#iframeId");
+                    var h = main.attr("data-height");
+                    var thisheight2 = $(document).height();
+                    main.height(h);
+
+                    $('#btn-show').on('click', function () {
+                        $('#btn-show').remove();
+                        $('#btn-show').hide();
+                        $(".button_hide").css('display', 'block');
+                        newBox.html(text);
+                        var main = $(window.parent.document).find("#iframeId");
+                        var thisheight = $(document).height();
+                        main.height(thisheight);
+                    });
+                });
+            };
