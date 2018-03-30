@@ -342,7 +342,7 @@
     width: 676px;
     height: 2px;
     background: url("../images/linedetail.png");
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
 .about-main .button_show{
@@ -690,7 +690,7 @@
 .teamlist li {
     list-style-type:none;
     background-color: #fff;
-    margin: 0 35px 0 30px;
+    margin: 0;
     height: auto;
     border-bottom: 1px solid #ccc;
 }

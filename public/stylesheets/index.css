@@ -108,7 +108,6 @@
     }
 
     .index-detail ul li .title, .condition .tabTitle {
-        line-height: 1;
         height: 70px;
         border-bottom: 2px solid #F1472D;
         font: bold 20px/70px "Microsoft YaHei";
@@ -120,6 +119,13 @@
         border-bottom: 2px solid #FFBE63;
         height: 68px;
         width: 96px;
+    }
+    .index-detail ul li h1, .index-detail ul li h2 {
+        font-size: 24px;
+        height: 68px;
+        width: 96px;
+        font-family: 'Microsoft YaHei';
+        border-bottom: 2px solid #FFBE63;
     }
 
     .index-detail .about .p {
@@ -204,11 +210,16 @@
         width: 130px;
     }
 
-    .index-detail .condition h3 {
+    .index-detail .condition .sdl {
         float: left;
         height: 68px;
         width: 96px;
+        padding-right: 15px;
         cursor: pointer;
+        border-bottom: 2px solid #f1472d;
+    }
+    .index-detail .condition .sdl.active {
+        border-bottom-color: #FFBE63;
     }
 
     .index-detail .condition .tabTitle {

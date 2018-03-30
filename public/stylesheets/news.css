@@ -15,6 +15,7 @@
 }
 .about-detail .trends-title{
     margin-bottom:10px;
+    overflow: hidden;
 }
 .about-detail .trends-title span{
     color: #999999;
@@ -43,7 +44,6 @@
     margin-left: 0
 }
 .about-main .newsJumpLink .trends-text {
-    margin-bottom: 10px;
     overflow: hidden;
 }
 .about-main .newsJumpLink p {
@@ -103,10 +103,10 @@
 }
 .about-detail .trends-img{
     width: 110px;
-    margin-top:-8px;
 }
 .about-detail.media .trends-text{
     margin-left:110px;
+    margin-top: 5px;
     overflow: hidden;
 }
 .about-detail.media li {

@@ -3,7 +3,7 @@
         ul.clearfix
             li.about
                 .title
-                    h3
+                    h1.sdl.active
                         a(href="#{aboutLink}") 关于商赢
                 div.p
                     a(href="/#{aboutLink}").aboutcontent !{aboutText}
@@ -11,7 +11,7 @@
                     a(href="/#{aboutLink}") 查看更多
             li.product
                 .title
-                    h3
+                    h2.sdl.active
                         a(href="/#{industriesLink}") 商赢产业
                 .product-concat
                     each industries in industriesList
@@ -23,9 +23,9 @@
             li.condition
                 #tabHeader.tabHeader
                     .tabTitle
-                        h3
+                        h2.sdl
                             a 商赢视频
-                        h3
+                        h2.sdl
                             a 商赢动态
                 #tabDetail.tabDetail
                     .tabState

@@ -55,9 +55,9 @@ $(function() {
         videoPhoto = $("#coverPhotoUrl").val();
     jwplayer("standard_video").setup(video_player.setStandOption(videoUrl, videoPhoto, 180, "100%"));
 
-    $("#tabHeader h3").eq(0).addClass("active");
+    $("#tabHeader h2").eq(0).addClass("active");
     $("#tabDetail .tabState").eq(0).addClass("active");
-    $("#tabHeader h3").on("click",function () {
+    $("#tabHeader h2").on("click",function () {
         var index = $(this).index();
         $(this).addClass("active").siblings().removeClass("active");
         $("#tabDetail .tabState").eq(index).addClass("active").siblings().removeClass("active");

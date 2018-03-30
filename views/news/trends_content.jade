@@ -7,7 +7,9 @@
                     a(href="#{news.contentUrl}" target="_blank" rel="nofollow")
                         .trends-img.fl
                         p.trends-text
-                            span.trends-title.at.light_a #{news.title}
+                            div.trends-title
+                                h2.at.light_a.fl #{news.title}
+                                span.fr.ac  #{news.dateTime}
                             span.fr.ac  #{news.dateTime}
                             p.trends-source #{news.newsSources}
                             p.trends-content.ac.text-over2  !{news.desc}
@@ -15,7 +17,9 @@
                     a(href="/news/trends/#{news.id}")
                         .trends-img.fl
                         p.trends-text
-                            span.trends-title.at.light_a #{news.title}
+                            div.trends-title
+                                h2.at.light_a.fl #{news.title}
+                                span.fr.ac  #{news.dateTime}
                             span.fr.ac  #{news.dateTime}
                             p.trends-source #{news.newsSources}
                             p.trends-content.ac.text-over2  !{news.desc}
