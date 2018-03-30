@@ -1,6 +1,12 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  .error-page
+    .error-page-warp
+      .error-img
+      .error-right
+        if status == 404
+          .error-status.error-status-404
+        if status == 500
+          .error-status.error-status-500
+        a(href="/").error-btn 返回首页
