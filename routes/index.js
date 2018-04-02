@@ -21,6 +21,11 @@ var homePage = function() {
                 industriesList.forEach(function(item, index) {
                     industriesList[index].url = item.url.split('.')[0];
                 });
+                for(var i =0; i<bannerList.length; i++) {
+                    if(bannerList[i].url.match(/shangyingjt/g)) {
+                        bannerList[i].url = bannerList[i].url.split(".html")[0];
+                    }
+                }
                 news = _json.data.news;
                 news.url = news.url.split('.')[0];
                 video = _json.data.video;
@@ -69,24 +74,26 @@ var link = function() {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+    var key = req.originalUrl;
     request.navigationBar().then(function(navigationBar) {
         homePage().then(function(data) {
             link().then(function(links) {
-                res.render('index/index', {
-                    title: '商赢集团官方网站-商者无域，相融共赢',
-                    description: '商赢控股集团有限公司成立于2014年9月，总部位于上海，集团发展至今，业务范围已拓展到资本、金融、电商等多个领域，构建了商赢环球（600146）、商赢金控、商赢电商三大平台。',
-                    keywords: '商赢,商赢官网,商赢集团,商赢控股,商赢环球,商赢电商,商赢金控,商赢金服',
-                    bannerList: data.bannerList,
-                    navigationBar: navigationBar,
-                    industriesList: data.industriesList,
-                    news: data.news,
-                    video: data.video,
-                    activeIndex: 0,
-                    aboutLink: data.aboutLink,
-                    aboutText: data.aboutText,
-                    industriesLink: data.industriesLink,
-                    links: links
-                });
+                console.log(config.tdk)
+                console.log(key)
+                res.render('index/index', Object.assign(
+                    {
+                        bannerList: data.bannerList,
+                        navigationBar: navigationBar,
+                        industriesList: data.industriesList,
+                        news: data.news,
+                        video: data.video,
+                        activeIndex: 0,
+                        aboutLink: data.aboutLink,
+                        aboutText: data.aboutText,
+                        industriesLink: data.industriesLink,
+                        links: links
+                    },config.tdk[key]
+                ));
             });
         });
     });

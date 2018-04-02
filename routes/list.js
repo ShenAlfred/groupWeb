@@ -18,7 +18,6 @@ function getMews(url, level, level2) {
                 contentDetail.level_name = level;
                 contentDetail.level2_name = level2;
                 contentDetail.currentViewIndex = _json.iPage;
-                console.log(contentDetail);
                 if(_json.iPage < _json.pageCount){
                     if(_json.pageCount >= 5){
                         if(_json.iPage < 5) {
@@ -52,6 +51,7 @@ function getMews(url, level, level2) {
 router.get('/:id', function(req, res, next) {
     var page_num = req.params.id;
     var path = req.baseUrl.split('/');
+    console.log(req.baseUrl)
     var apiUrl = "";
     if(path[2] == "media") {
         apiUrl = 'http://gsite.shangyingjt.com/api/newsList/2?pageSize=4&iPage='+ page_num;
@@ -82,22 +82,17 @@ router.get('/:id', function(req, res, next) {
         });
 
         getMews(apiUrl,path[1],path[2]).then(function(data) {
-
-            res.render('mainview/'+path[2], {
-                title: '集团简介_关于商赢-商赢集团官网',
-                description: '商赢集团通过资本助力，科技创新，以打造“消费新生态，金融新生态”为企业使命，立志成为公众信赖，值得托付的全球化多平台产融集团，实现“商者无域，相融共赢”的企业愿景！',
-                keywords: '集团简介,商赢,商赢集团',
-                content: data,
-                navigationBar: navigationBar,
-                activeIndex: activeIndex,
-                activeIndex_two: activeIndex_two,
-                wherePage: path[1]+'-'+path[2]
-            });
-
+            res.render('mainview/'+path[2], Object.assign(
+                {
+                    content: data,
+                    navigationBar: navigationBar,
+                    activeIndex: activeIndex,
+                    activeIndex_two: activeIndex_two,
+                    wherePage: path[1]+'-'+path[2]
+                },config.tdk["/"+path[1]+"-"+path[2]]
+            ));
         });
-
     });
-
 });
 
 module.exports = router;
