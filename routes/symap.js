@@ -3,7 +3,7 @@ var router = express.Router();
 var http = require('http');
 
 router.get('/', function(req, res, next) {
-    console.log(req.query)
+
     const width = parseInt(req.query.w);
     const height = parseInt(req.query.h);
     const lng = req.query.mapPoint.split(',')[0];

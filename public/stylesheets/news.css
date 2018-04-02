@@ -49,6 +49,9 @@
 .about-main .newsJumpLink p {
     text-indent: 0;
 }
+.about-main .newsJumpLink p.trends-source {
+    padding-left: 25px;
+}
 .newsJumpLink p {
     text-indent: 0;
 }

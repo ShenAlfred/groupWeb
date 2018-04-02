@@ -8,9 +8,9 @@ block content
         .main.clearfix
             .about-title
                 a(href="#{navigationBar[0].url}").text1 #{navigationBar[0].name}
-                !{'&nbsp;&gt;&nbsp;'}
+                    !{'&nbsp;&gt;&nbsp;'}
                 a(href="#{navigationBar[activeIndex].url}").text2 #{navigationBar[activeIndex].name}
-                !{'&nbsp;&gt;&nbsp;'}
+                    !{'&nbsp;&gt;&nbsp;'}
                 span.text3 #{navigationBar[activeIndex].barResList[activeIndex_two].name}
             include ../include/left_block
             include ../include/right_block
