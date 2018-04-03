@@ -51,19 +51,18 @@ function getMews(url, level, level2) {
 router.get('/:id', function(req, res, next) {
     var page_num = req.params.id;
     var path = req.baseUrl.split('/');
-    console.log(req.baseUrl)
     var apiUrl = "";
     if(path[2] == "media") {
-        apiUrl = 'http://gsite.shangyingjt.com/api/newsList/2?pageSize=4&iPage='+ page_num;
+        apiUrl = config.baseUrl + '/api/newsList/2?pageSize=4&iPage='+ page_num;
     }
     if(path[2] == "trends") {
-        apiUrl = 'http://gsite.shangyingjt.com/api/newsList/1?pageSize=4&iPage='+ page_num;
+        apiUrl = config.baseUrl + '/api/newsList/1?pageSize=4&iPage='+ page_num;
     }
     if(path[2] == "video") {
-        apiUrl = 'http://gsite.shangyingjt.com/api/videoList/?pageSize=6&iPage='+ page_num;
+        apiUrl = config.baseUrl + '/api/videoList/?pageSize=6&iPage='+ page_num;
     }
     if(path[2] == "staff") {
-        apiUrl = 'http://gsite.shangyingjt.com/api/style?pageSize=3&iPage=' + page_num;
+        apiUrl = config.baseUrl + '/api/style?pageSize=3&iPage=' + page_num;
     }
 
     request.navigationBar().then(function(navigationBar) {

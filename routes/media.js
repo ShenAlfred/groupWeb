@@ -7,7 +7,7 @@ var contentDetail, activeIndex, activeIndex_two;
 
 var getNewsList = function() {
     return new Promise(function(resolve, reject) {
-        var req = http.get(config.baseUrl + '/api/newsList/2', function(req, res) {
+        var req = http.get(config.baseUrl + '/api/newsList/2?pageSize=4&iPage=1', function(req, res) {
             var result = Buffer.allocUnsafe(0);
             req.on('data', function(chunk){
                 result = Buffer.concat([result, chunk], result.length + chunk.length);

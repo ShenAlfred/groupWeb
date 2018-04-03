@@ -8,7 +8,7 @@ var activeIndex, activeIndex_two;
 
 var getTrends = function() {
     return new Promise(function(resolve, reject) {
-       var req = http.get(config.baseUrl + '/api/newsList/1', function(req, res) {
+       var req = http.get(config.baseUrl + '/api/newsList/1?pageSize=4&iPage=1', function(req, res) {
            var result = Buffer.allocUnsafe(0);
            req.on('data', function(chunk){
                result = Buffer.concat([result, chunk], result.length + chunk.length);
